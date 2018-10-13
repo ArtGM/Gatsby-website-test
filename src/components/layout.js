@@ -4,8 +4,9 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
 import Header from './header'
-import Menu from './menu'
-import './layout.css'
+import './assets/css/main.css'
+import './assets/css/noscript.css'
+import './assets/css/font-awesome.min.css'
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -30,8 +31,8 @@ const Layout = ({ children }) => (
           <html lang="en" />
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <Menu />
-        <div
+        
+        <div className="youpi"
           style={{
             margin: '0 auto',
             maxWidth: 960,
