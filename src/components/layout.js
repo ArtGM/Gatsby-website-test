@@ -6,6 +6,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import Header from './header'
 import Footer from './footer'
 
+
 //CSS 
 import './assets/css/main.css'
 import './assets/css/noscript.css'
@@ -33,11 +34,16 @@ const Layout = ({ children }) => (
           ]}
         >
           <html lang="fr" />
+          <script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript" defer="true"></script>
+          <script src="static/js/breakpoints.min.js" type="text/javascript" defer="true"></script>
+          <script src="static/js/browser.min.js" type="text/javascript" defer="true"></script>
+          <script src="static/js/main.js" type="text/javascript" defer="true"></script>
+          <script src="static/js/util.js" type="text/javascript" defer="true"></script>
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
           {children}
         <Footer />
-        <div id='bg'></div>
+        <div id='bg'></div> 
       </>
     )}
   />

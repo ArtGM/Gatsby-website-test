@@ -15,15 +15,6 @@ export default class HTML extends React.Component {
 					{this.props.preBodyComponents}
 					<div key={`body`} id="___gatsby" dangerouslySetInnerHTML={{ __html: this.props.body }} />
 					{this.props.postBodyComponents}
-					<script
-						src="https://code.jquery.com/jquery-3.3.1.min.js"
-						integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-						crossOrigin="anonymous"
-					/>
-					<script src="static/js/breakpoints.min.js" />
-					<script src="static/js/browser.min.js" />
-					<script src="static/js/main.js" />
-					<script src="static/js/util.js" />
 				</body>
 			</html>
 		);
