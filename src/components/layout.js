@@ -4,9 +4,13 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
 import Header from './header'
+import Footer from './footer'
+
+//CSS 
 import './assets/css/main.css'
 import './assets/css/noscript.css'
 import './assets/css/font-awesome.min.css'
+
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -28,20 +32,12 @@ const Layout = ({ children }) => (
             { name: 'keywords', content: 'sample, something' },
           ]}
         >
-          <html lang="en" />
+          <html lang="fr" />
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
-        
-        <div className="youpi"
-          style={{
-            margin: '0 auto',
-            maxWidth: 960,
-            padding: '0px 1.0875rem 1.45rem',
-            paddingTop: 0,
-          }}
-        >
           {children}
-        </div>
+        <Footer />
+        <div id='bg'></div>
       </>
     )}
   />

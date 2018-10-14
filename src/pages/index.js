@@ -1,8 +1,12 @@
 import React from 'react';
-//import { Link } from 'gatsby';
 
 import Layout from '../components/layout';
+import Main from '../components/main';
 
-const IndexPage = () => <Layout />;
+const IndexPage = () => (
+	<Layout>
+		<Main />
+	</Layout>
+);
 
 export default IndexPage;
