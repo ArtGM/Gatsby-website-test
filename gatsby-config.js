@@ -8,7 +8,7 @@ module.exports = {
 			resolve: `gatsby-plugin-manifest`,
 			options: {
 				name: 'AM Portfolio',
-				short_name: 'portfolio',
+				short_name: 'starter',
 				start_url: '/',
 				background_color: '#663399',
 				theme_color: '#663399',
@@ -26,6 +26,9 @@ module.exports = {
 			}
 		},
 		'gatsby-transformer-remark',
-		'gatsby-plugin-sass'
+		'gatsby-plugin-sass',
+		{
+			resolve: 'gatsby-plugin-babel'
+		}
 	]
 };

@@ -1,7 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import main from './components/assets/js/main';
+import util from './components/assets/js/util';
+
 export default class HTML extends React.Component {
+	componentdidMount() {
+		main();
+		util();
+	}
+
 	render() {
 		return (
 			<html {...this.props.htmlAttributes}>
@@ -15,6 +23,7 @@ export default class HTML extends React.Component {
 					{this.props.preBodyComponents}
 					<div key={`body`} id="___gatsby" dangerouslySetInnerHTML={{ __html: this.props.body }} />
 					{this.props.postBodyComponents}
+					{/* <script dangerouslySetInnerHTML={{ __html: breakpoints }} ></script> */}
 				</body>
 			</html>
 		);
