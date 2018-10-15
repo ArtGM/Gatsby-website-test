@@ -2848,6 +2848,7 @@ body.is-preload #header .content .inner {
 }
 
 #main article {
+	display: none;
 	position: relative;
 	width: 40rem;
 	max-width: 100%;

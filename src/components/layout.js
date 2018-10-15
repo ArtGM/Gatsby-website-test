@@ -11,7 +11,7 @@ import './assets/css/main.css';
 //import './assets/css/noscript.css';
 import './assets/css/font-awesome.min.css';
 
-const Layout = ({ children }) => {
+const Layout = ({ children, location }) => {
 	return (
 		<StaticQuery
 			query={graphql`
@@ -34,9 +34,11 @@ const Layout = ({ children }) => {
 					>
 						<html lang="fr" />
 					</Helmet>
-					<Header siteTitle={data.site.siteMetadata.title} />
-					{children}
-					<Footer />
+					<div id="wrapper">
+						<Header siteTitle={data.site.siteMetadata.title} location={location} />
+						{children}
+						<Footer />
+					</div>
 					<div id="bg" />
 				</React.Fragment>
 			)}
