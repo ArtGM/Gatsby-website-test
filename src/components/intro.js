@@ -1,10 +1,11 @@
 import React from 'react';
+import imgIntro from '../images/pic01.jpg';
 
 const Intro = () => (
 	<article id="intro">
 		<h2 className="major">Intro</h2>
 		<span className="image main">
-			<img src="./src/images/pic01.jpg" alt="" />
+			<img src={imgIntro} alt="" />
 		</span>
 		<p>
 			Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue.

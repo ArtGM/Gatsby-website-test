@@ -2023,7 +2023,7 @@ input[type='radio'] + label:before {
 	opacity: .5;
 	border-radius: 2px;
 	background-color: rgba(19, 21, 25, .5);
-	background-image: url('/src/images/overlay.png');
+	background-image: url('./overlay.png');
 }
 
 .image img {
@@ -2451,7 +2451,7 @@ button {
 /* BG */
 #bg {
 	position: fixed;
-	z-index: 1;
+	z-index: -1;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -2477,8 +2477,7 @@ button {
 	z-index: 2;
 	transition: background-color 2.5s ease-in-out;
 	transition-delay: .75s;
-	background-image: linear-gradient(to top, rgba(19, 21, 25, .5), rgba(19, 21, 25, .5)),
-		url('/src/images/overlay.png');
+	background-image: linear-gradient(to top, rgba(19, 21, 25, .5), rgba(19, 21, 25, .5)), url('./overlay.png');
 	background-repeat: no-repeat, repeat;
 	background-position: center, center;
 	background-size: auto, 256px 256px;
@@ -2492,7 +2491,7 @@ button {
 		-webkit-filter .325s ease-in-out;
 	-webkit-transform: scale(1.125);
 	transform: scale(1.125);
-	background-image: url('/src/images/bg.jpg');
+	background-image: url('./bg.jpg');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -2652,6 +2651,13 @@ body.is-preload #bg:before {
 	border: solid 1px #fff;
 	border-radius: 2px;
 	box-shadow: 1px 1px 5px rgba(0, 0, 0, .4);
+	transition: height 0.3s ease-in-out;
+}
+
+.slide-toggle {
+	overflow: hidden;
+	height: 207px;
+	display: block;
 }
 
 #header nav ul li {

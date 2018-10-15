@@ -8,7 +8,7 @@ import Footer from './footer';
 
 //CSS
 import './assets/css/main.css';
-import './assets/css/noscript.css';
+//import './assets/css/noscript.css';
 import './assets/css/font-awesome.min.css';
 
 const Layout = ({ children }) => {

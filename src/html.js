@@ -1,15 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import main from './components/assets/js/main';
-import util from './components/assets/js/util';
-
 export default class HTML extends React.Component {
-	componentdidMount() {
-		main();
-		util();
-	}
-
 	render() {
 		return (
 			<html {...this.props.htmlAttributes}>
@@ -19,11 +11,10 @@ export default class HTML extends React.Component {
 					<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 					{this.props.headComponents}
 				</head>
-				<body className="is-preload" {...this.props.bodyAttributes}>
+				<body ref={(el) => (this.el = el)} className="is-preload" {...this.props.bodyAttributes}>
 					{this.props.preBodyComponents}
 					<div key={`body`} id="___gatsby" dangerouslySetInnerHTML={{ __html: this.props.body }} />
 					{this.props.postBodyComponents}
-					{/* <script dangerouslySetInnerHTML={{ __html: breakpoints }} ></script> */}
 				</body>
 			</html>
 		);
