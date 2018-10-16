@@ -1,33 +1,18 @@
 import React, { Component } from 'react';
 import Menu from './menu';
-import $ from 'jquery';
 
 import logo from '../images/SVG/logo.svg';
-window.jQuery = window.$ = $;
 
 export default class Header extends Component {
-	componentDidUpdate = () => {
-		//smart menu
-		let smartMenu = $('#smart-menu'),
-			theMenu = $('.menu-entry');
-
-		smartMenu.click(() => {
-			theMenu.slideToggle('slow');
-			smartMenu.toggleClass('is-active');
-		});
-	};
+	componentDidMount = () => {};
 	render() {
 		//const { siteTitle } = this.props;
 		return (
 			<header id="header">
 				<div className="logo">
-					<img style={{ width: '70px' }} src={logo} alt="AM logo" />
+					<img id="logo" src={logo} alt="AM logo" />
 				</div>
-				<button id="smart-menu" class="hamburger hamburger--minus" type="button">
-					<span class="hamburger-box">
-						<span class="hamburger-inner" />
-					</span>
-				</button>
+
 				<Menu />
 				<div className="content">
 					<div className="inner">

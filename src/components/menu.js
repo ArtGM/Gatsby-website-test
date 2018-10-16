@@ -1,26 +1,24 @@
-import React from 'react';
-//import { Link } from 'gatsby'
+import React, { Component } from 'react';
 
-const Menu = () => (
-	<nav>
-		<ul className="menu-entry">
-			<li>
-				<a href="#intro">Intro</a>
-			</li>
-			<li>
-				<a href="#work">Work</a>
-			</li>
-			<li>
-				<a href="#about">About</a>
-			</li>
-			<li>
-				<a href="#contact">Contact</a>
-			</li>
-			<li>
-				<a href="#elements">Elements</a>
-			</li>
-		</ul>
-	</nav>
-);
-
-export default Menu;
+export default class Menu extends Component {
+	render() {
+		return (
+			<nav>
+				<ul className="menu-entry">
+					<li>
+						<a href="#intro">Intro</a>
+					</li>
+					<li>
+						<a href="#work">Work</a>
+					</li>
+					<li>
+						<a href="#about">About</a>
+					</li>
+					<li>
+						<a href="#contact">Contact</a>
+					</li>
+				</ul>
+			</nav>
+		);
+	}
+}
